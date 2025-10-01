@@ -70,11 +70,4 @@ print(f"The date today is {today}")
 year = today[:today.find(',',0)]
 month = today[today.find(',',4)+1:today.find(',',5)]
 day = today[today.find(',',5)+1:]
-if(int(day)>3):
-    print(f"Today is the {day}th of {month}, {year}.")
-elif(int(day)==1):
-    print(f"Today is the {day}st of {month}, {year}.")
-elif(int(day)==2):
-    print(f"Today is the {day}nd of {month}, {year}.")
-else:
-    print(f"Today is the {day}rd of {month}, {year}.")
+print(f"Today is the {day} of {month}, {year}.")
