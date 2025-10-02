@@ -12,8 +12,8 @@ print("Task #1")
 full_name = input("What is your first and last name?\t")
 
 #seperating first and last name
-first_name = full_name[:full_name.find(" ",0)]
-last_name = full_name[full_name.find(" ",0)+1:]
+first_name = full_name[:full_name.find(" ")]
+last_name = full_name[full_name.find(" ")+1:]
 
 #printing First-name, Last-name
 print(first_name.title()+", "+last_name.title())
@@ -49,8 +49,8 @@ print(piece1)
 #Task #4 (Digit Sum)
 print("\nTask #4")
 number = input("Enter a 5 digit number:\t")
-print(number[0],number[1],number[2],number[3],number[4]+f' = {(int(number[0])+int(number[1])+int(number[2])+int(number[3])+int(number[4]))}',sep='+')
-
+print(f"{number[0]}+{number[1]}+{number[2]}+{number[3]}+{number[4]} = \
+{(int(number[0])+int(number[1])+int(number[2])+int(number[3])+int(number[4]))}")
 
 
 #Task #5 (Some Weird Slicing)
@@ -67,7 +67,7 @@ from datetime import date
 today = date.today()
 today = today.strftime("%Y,%B,%d")
 print(f"The date today is {today}")
-year = today[:today.find(',',0)]
+year = today[:today.find(',')]
 month = today[today.find(',',4)+1:today.find(',',5)]
 day = today[today.find(',',5)+1:]
 print(f"Today is the {day} of {month}, {year}.")
